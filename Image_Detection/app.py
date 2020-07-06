@@ -10,7 +10,7 @@ from tensorflow.keras.applications.resnet50 import ResNet50
 import numpy as np
 
 timestr = time.strftime("%Y%m%d%H%M%S")
-UPLOAD_FOLDER = '/content/Image_Detection/uploads'
+UPLOAD_FOLDER = '/content/image-recognition-web-app/Image_Detection/uploads'
 ALLOWED_EXTENSIONS = set(['txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif'])
 
 app = Flask(__name__)
