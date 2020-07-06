@@ -1,11 +1,19 @@
 <!doctype html>
-<title>Image predictor</title>
-{% if filename %}
-  <center>
-  <h1> <img src="{{ url_for('send_file', filename=filename) }}"></h1>
-  <h3>This image is: {{ value }}<h3>
-    <button type="button" onclick="location.href='/';">Back</button>
-  </center>
-{% else %}
-  <h1> image not available</h1>
-{% endif %}
+<head>
+    <title>Image predictor</title>
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/bootstrap_blue.css') }}">
+</head>
+<body>
+    {% if filename %}
+    <div class="form">
+            <center>
+                <h1>Predicted Image</h1>
+                <h1> <img src="{{ url_for('send_file', filename=filename) }}"></h1>
+                <h2>This image is: {{ value }}<h2>
+                <button type="button" class="btn btn-warning" onclick="location.href='/';">Back</button>
+            </center>
+    {% else %}
+         <h1> Image not available</h1>
+    {% endif %}
+        </div>
+</body>
