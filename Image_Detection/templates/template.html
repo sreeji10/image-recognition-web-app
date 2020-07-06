@@ -1,0 +1,11 @@
+<!doctype html>
+<title>Image predictor</title>
+{% if filename %}
+  <center>
+  <h1> <img src="{{ url_for('send_file', filename=filename) }}"></h1>
+  <h3>This image is: {{ value }}<h3>
+    <button type="button" onclick="location.href='/';">Back</button>
+  </center>
+{% else %}
+  <h1> image not available</h1>
+{% endif %}
